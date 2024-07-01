@@ -1,0 +1,232 @@
+.header {
+  position: relative;
+  display: flex;
+  background: var(--bg--page);
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px 0 28px;
+
+  @include onDesktop {
+    position: absolute;
+  }
+
+  &--small {
+    padding: 14px;
+  }
+
+  &--landing {
+    padding: 40px 28px;
+
+    @include onDesktop {
+      position: static;
+      padding: 40px 70px 40px 180px;
+    }
+  }
+
+  &__line {
+    --height: 2px;
+
+    @include onTablet {
+      --height: 3px;
+    }
+
+    @include onDesktop {
+      --height: 4px;
+    }
+
+    height: var(--height);
+    width: 100%;
+    content: '';
+    background: linear-gradient(90deg, #2D29FF 0%, #FFFFFF 100%);
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include onTablet {
+      padding: 15px 25px 15px 17px;
+    }
+
+    @include onDesktop {
+      position: absolute;
+      display: block;
+      left: 20px;
+      top: 20px;
+      width: 255px;
+      box-sizing: border-box;
+      padding: 15px 30px;
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    &--landing {
+      padding: 0;
+
+      @include onDesktop {
+        position: static;
+      }
+    }
+  }
+
+  &__menu {
+    @include square(28px);
+    background-image: url("../images/menu.svg");
+    background-size: contain;
+
+    @include onTablet {
+      @include square(58px);
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    background: none;
+    color: var(--text--white);
+    height: min-content;
+
+    @include onDesktop {
+      gap: 10px;
+      height: min-content;
+    }
+
+    &--landing {
+      gap: 5px;
+
+      @include onTablet {
+        gap: 16px;
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.3em;
+      display: inline-block;
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+      font-weight: 500;
+      text-align: left;
+
+      @include onTablet {
+        font-size: 41px;
+      }
+
+      @include onDesktop {
+        font-size: 28px;
+        font-weight: 600;
+      }
+
+      &--landing {
+        font-size: 16px;
+
+        @include onTablet {
+          font-size: 20px;
+        }
+
+        @include onDesktop {
+          font-size: 30px;
+        }
+      }
+    }
+
+    &-img {
+      width: 28px;
+
+      @include onTablet {
+        width: 58px;
+      }
+
+      @include onDesktop {
+        width: 52px;
+        height: 54px;
+      }
+
+      &--landing {
+        width: 28px;
+
+        @include onTablet {
+          width: 58px;
+        }
+
+        @include onDesktop {
+          width: 70px;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include onDesktop {
+      display: flex;
+      gap: 40px;
+    }
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__button {
+    display: none;
+
+    @include onTablet {
+      display: flex;
+    }
+  }
+
+  &__menu {
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  // &__switcher {
+  //   justify-self: flex-end;
+  //   width: 50px;
+  //   background-color: var(--bg--page);
+  //   border-radius: 20px;
+  //   padding: 5px;
+  //   margin-left: 20px;
+  //   box-sizing: border-box;
+  //   cursor: pointer;
+  //   height: min-content;
+
+  //   @include onTablet {
+  //     width: 80px;
+  //     margin-left: 90px;
+  //   }
+
+  //   @include onDesktop {
+  //     position: absolute;
+  //     margin: 0;
+  //     left: 110px;
+  //     top: 645px;
+  //     z-index: 2;
+  //   }
+
+  //   &::after {
+  //     content: '';
+  //     display: block;
+  //     width: 50%;
+  //     padding-bottom: 50%;
+  //     border-radius: 50%;
+  //     background: var(--button--bg);
+  //     z-index: 3;
+  //   }
+  // }
+}
